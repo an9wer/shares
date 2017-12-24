@@ -6,15 +6,94 @@
     <body>
         <div class="reveal">
             <div class="slides">
-                <section>Single Horizontal Slide</section>
-                <section>
-                    <section>Slide 1</section>
-                    <section>Slide 2</section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ## 爬虫入坑指南
+                        ---
+                        ### by an9wer
+                    </textarea>
                 </section>
                 <section data-markdown>
                     <textarea data-template>
-                        - 1
-                        - 2
+                        1.  什么是爬虫
+
+                        2.  爬虫的应用
+
+                        3.  如何写一个爬虫
+
+                        4.  用 python 写爬虫的优势
+
+                        5.  关于反爬虫
+
+                        6.  爬虫进阶
+
+                        7.  爬虫实例
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### what is 爬虫 <!-- .element: style="margin-bottom: 12%;" -->
+                        程序在浏览网页    <!-- .element: class="fragment" -->
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### use of 爬虫    <!-- .element: style="margin-bottom: 12%;" -->
+                        - 企业：大数据        <!-- .element: class="fragment" style="margin-bottom: 25%;"-->
+                        - 个人：小工具        <!-- .element: class="fragment" -->
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### how to 爬虫   <!-- .element: style="margin-bottom: 5%;" -->
+                        1.  send a request and get a response with content  <!-- .element: class="fragment" -->
+
+                            - urllib & urllib2 & cookielib   <!-- .element: class="fragment" -->
+
+                            - requests      <!-- .element: class="fragment" -->
+
+                        2.  parse the response content  <!-- .element: class="fragment" -->
+
+                            - regex: re    <!-- .element: class="fragment" -->
+
+                            - css selector: beautifulsoup  <!-- .element: class="fragment" -->
+
+                            - xpath selector: lxml         <!-- .element: class="fragment" -->
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### step one
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### step two
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### why is python
+                        - Python 语法简洁，第三方库多，开发效率高。
+
+                        - 网络 IO 的时间冲淡了 Python 的性能问题。
+
+                        - Python 的爬虫生态完善。
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### anit-爬虫
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### advanced 爬虫
+                    </textarea>
+                </section>
+                <section data-markdown>
+                    <textarea data-template>
+                        ### 爬虫 in action
                     </textarea>
                 </section>
             </div>
@@ -23,8 +102,9 @@
         <script src="https://cdn.bootcss.com/reveal.js/3.6.0/js/reveal.min.js"></script>
         <script>
         Reveal.initialize({
+            transition: 'convex',
             dependencies: [
-                // Interpret Markdown in <section> elements
+                    // Interpret Markdown in <section> elements
                     { src: 'https://cdn.bootcss.com/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'https://cdn.bootcss.com/reveal.js/3.6.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                 ]
