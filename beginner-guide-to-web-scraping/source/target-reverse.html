@@ -15,6 +15,7 @@
             <li><a href="#banana">banana</a></li>
             <li><a href="#tomato">tomato</a></li>
         </ul>
+        <button onclick="reverseAll()">reverse all</button>
     </div>
     <hr>
     <!-- content -->
@@ -37,5 +38,14 @@
     <div id="footer">
         <p>cooked by some guy</p>
     </div>
+    <!-- script -->
+    <script>
+        function reverseAll() {
+            var fruits = document.querySelectorAll("li a");
+            for (var i = 0; i < fruits.length; i++) {
+                fruits[i].innerHTML = fruits[i].innerHTML.split("").reverse().join("");
+            }
+        }
+    </script>
 </body>
-</html>
+    </html>
