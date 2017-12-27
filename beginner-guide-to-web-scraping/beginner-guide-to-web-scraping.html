@@ -8,7 +8,7 @@
             <div class="slides">
                 <section data-markdown>
                     <textarea data-template>
-                        ## 爬虫入坑指南
+                        ## 爬虫二三事
                         ---
                         ### by an9wer
                     </textarea>
@@ -21,31 +21,32 @@
 
                         3.  如何写一个爬虫
 
-                        4.  用 python 写爬虫的优势
+                        4.  爬虫进阶
 
                         5.  关于反爬虫
 
-                        6.  爬虫进阶
-
-                        7.  爬虫实例
+                        6.  爬虫实例
                     </textarea>
                 </section>
                 <section data-markdown>
                     <textarea data-template>
                         ### what is 爬虫 <!-- .element: style="margin-bottom: 12%;" -->
+
                         程序在浏览网页    <!-- .element: class="fragment" -->
                     </textarea>
                 </section>
                 <section data-markdown>
                     <textarea data-template>
                         ### use of 爬虫    <!-- .element: style="margin-bottom: 12%;" -->
-                        - 企业：大数据        <!-- .element: class="fragment" style="margin-bottom: 25%;"-->
-                        - 个人：小工具        <!-- .element: class="fragment" -->
+
+                        - 企业：大数据平台，信息聚合平台        <!-- .element: class="fragment" style="margin-bottom: 25%;"-->
+                        - 个人：小工具                        <!-- .element: class="fragment" -->
                     </textarea>
                 </section>
-                <section data-markdown>
+                <section data-markdown style="font-size: 80%;">
                     <textarea data-template>
                         ### how to 爬虫   <!-- .element: style="margin-bottom: 5%;" -->
+
                         1.  send a request and get a response with content  <!-- .element: class="fragment" -->
 
                             - urllib & urllib2 & cookielib   <!-- .element: class="fragment" -->
@@ -54,21 +55,33 @@
 
                         2.  parse the response content  <!-- .element: class="fragment" -->
 
-                            - regex: re    <!-- .element: class="fragment" -->
+                            - beautifulsoup  <!-- .element: class="fragment" -->
 
-                            - css selector: beautifulsoup  <!-- .element: class="fragment" -->
+                            - lxml          <!-- .element: class="fragment" -->
 
-                            - xpath selector: lxml         <!-- .element: class="fragment" -->
+                            - re            <!-- .element: class="fragment" -->
+
+                            - PhantomJS + selenium  <!-- .element: class="fragment" -->
                     </textarea>
                 </section>
-                <section data-markdown>
+                <section data-markdown style="font-size: 80%;">
                     <textarea data-template>
                         ### step one
+
+                        - requests.get(url, params=None, **kwargs)    <!-- .element: class="fragment" -->
+
+                        - requests.post(url, data=None, json=None, **kwargs)    <!-- .element: class="fragment" -->
+
+                        - requests.Response:        <!-- .element: class="fragment" -->
+
+                            - text, content, status_code, url, headers, cookies.    <!-- .element: class="fragment" -->
                     </textarea>
                 </section>
                 <section data-markdown>
                     <textarea data-template>
                         ### step two
+
+
                     </textarea>
                 </section>
                 <section data-markdown>
@@ -81,16 +94,82 @@
                         - Python 的爬虫生态完善。
                     </textarea>
                 </section>
-                <section data-markdown>
-                    <textarea data-template>
-                        ### anit-爬虫
-                    </textarea>
+
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### anit-爬虫
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 基于 request headers
+
+                            - user-agent
+
+                            - referer
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 基于 RPS
+
+                            - proxy
+
+                                <pre>   <!-- .element style="width: 100%;" -->
+                                <code>
+                                 request.get("http://example.org",
+                                             proxies={"http": "http://1.1.1.1:3128"})
+                                </code>
+                                </pre>
+                        </textarea>
+                    </section>
+                    <section data-markdown style="font-size: 80%;">
+                        <textarea data-template>
+                            ### 基于 ajax/javascript
+
+                            - PhantomJS + selenium
+
+                            PhantomJS: a headless WebKit scriptable with a JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
+
+                            selenium: Selenium automates browsers. That's it! What you do with that power is entirely up to you.
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 基于验证码
+
+                            # 卒
+                        </textarea>
+                    </section>
                 </section>
-                <section data-markdown>
-                    <textarea data-template>
-                        ### advanced 爬虫
-                    </textarea>
+
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### advanced 爬虫
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 整站爬取
+                        </textarea>
+                    </section>
+                    <section data-markdown style="font-size: 80%;">
+                        <textarea data-template>
+                            ### 多线程/多进程/分布式爬虫
+
+                            爬虫本身是 IO 密集型应用，大多数花销都用在了网络 IO 的等待上，CPU 没有得到充分的利用。
+
+                            - 多线程：受限于 Python 的 GIL，比较鸡肋。
+
+                            - 多进程：IPC 进行任务的调度 (multiprocessing.Queue/Pipe)
+
+                            - 分布式：任务池进行任务的调度 (redis)
+                        </textarea>
+                    </section>
                 </section>
+
                 <section data-markdown>
                     <textarea data-template>
                         ### 爬虫 in action
@@ -107,6 +186,8 @@
                     // Interpret Markdown in <section> elements
                     { src: 'https://cdn.bootcss.com/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'https://cdn.bootcss.com/reveal.js/3.6.0/plugin/markdown/markdown.min.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    //Syntax highlight for <code> elements
+                    { src: 'https://cdn.bootcss.com/reveal.js/3.6.0/plugin/highlight/highlight.min.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                 ]
             });
         </script>
