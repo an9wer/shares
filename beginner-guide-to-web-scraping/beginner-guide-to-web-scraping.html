@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/reveal.min.css">
         <link rel="stylesheet" href="https://cdn.bootcss.com/reveal.js/3.6.0/css/theme/league.min.css">
     </head>
@@ -39,7 +40,7 @@
                     <textarea data-template>
                         ### use of 爬虫    <!-- .element: style="margin-bottom: 12%;" -->
 
-                        - 企业：大数据平台，信息聚合平台        <!-- .element: class="fragment" style="margin-bottom: 25%;"-->
+                        - 企业：大数据平台，内容聚合平台        <!-- .element: class="fragment" style="margin-bottom: 15%;"-->
                         - 个人：小工具                        <!-- .element: class="fragment" -->
                     </textarea>
                 </section>
@@ -72,18 +73,29 @@
 
                         - requests.post(url, data=None, json=None, **kwargs)    <!-- .element: class="fragment" -->
 
-                        - requests.Response:        <!-- .element: class="fragment" -->
+                        - requests.Response        <!-- .element: class="fragment" -->
 
                             - text, content, status_code, url, headers, cookies.    <!-- .element: class="fragment" -->
+
+                        - requests.Session         <!-- .element: class="fragment" -->
                     </textarea>
                 </section>
                 <section data-markdown>
                     <textarea data-template>
                         ### step two
 
+                        - BeautifulSoup.find_all()/find()       <!-- .element: class="fragment" -->
+
+                          ![beautifulsoup find_all](./images/find_all.png)      <!-- .element: class="fragment" -->
+
+                        - BeautifulSoup.select()        <!-- .element: class="fragment" -->
+
+                          ![beautifulsoup select](./images/select.png)      <!-- .element: class="fragment" -->
 
                     </textarea>
                 </section>
+
+                <!--
                 <section data-markdown>
                     <textarea data-template>
                         ### why is python
@@ -93,6 +105,37 @@
 
                         - Python 的爬虫生态完善。
                     </textarea>
+                </section>
+                -->
+
+                <section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### advanced 爬虫
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ### 整站爬取
+
+                            - 网站结构整齐：利用广度优先或者深度优先进行爬取。      <!-- .element: class="fragment" -->
+
+                            - 网站结构凌乱：顺着页面中的 a 标签进行爬取，注意 url 的去重。    <!-- .element: class="fragment" -->
+                        </textarea>
+                    </section>
+                    <section data-markdown style="font-size: 80%;">
+                        <textarea data-template>
+                            ### 多线程/多进程/分布式爬虫
+
+                            爬虫本身是 IO 密集型应用，大多数花销都用在了网络 IO 的等待上，CPU 没有得到充分的利用。   <!-- .element: class="fragment" -->
+
+                            - 多线程：受限于 Python 的 GIL，比较鸡肋。        <!-- .element: class="fragment" -->
+
+                            - 多进程：IPC 进行任务的调度 (multiprocessing.Queue/Pipe)      <!-- .element: class="fragment" -->
+
+                            - 分布式：任务池进行任务的调度 (redis)       <!-- .element: class="fragment" -->
+                        </textarea>
+                    </section>
                 </section>
 
                 <section>
@@ -105,41 +148,38 @@
                         <textarea data-template>
                             ### 基于 request headers
 
-                            - user-agent
+                            - user-agent        <!-- .element: class="fragment" -->
 
-                            - referer
+                              ![headers](./images/headers.png)    <!-- .element: class="fragment" -->
+
+                            - referer           <!-- .element: class="fragment" -->
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
                             ### 基于 RPS
 
-                            - proxy
+                            - proxy         <!-- .element: class="fragment" -->
 
-                                <pre>   <!-- .element style="width: 100%;" -->
-                                <code>
-                                 request.get("http://example.org",
-                                             proxies={"http": "http://1.1.1.1:3128"})
-                                </code>
-                                </pre>
+                              ![proxies code](./images/proxies.png)     <!-- .element: class="fragment" -->
                         </textarea>
                     </section>
                     <section data-markdown style="font-size: 80%;">
                         <textarea data-template>
                             ### 基于 ajax/javascript
 
-                            - PhantomJS + selenium
+                            PhantomJS + selenium      <!-- .element: class="fragment" -->
 
-                            PhantomJS: a headless WebKit scriptable with a JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
+                            - PhantomJS: a headless WebKit scriptable with a JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.     <!-- .element: class="fragment" -->
 
-                            selenium: Selenium automates browsers. That's it! What you do with that power is entirely up to you.
+                            - selenium: Selenium automates browsers. That's it! What you do with that power is entirely up to you.    <!-- .element: class="fragment" -->
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
                             ### 基于验证码
 
-                            # 卒
+                            # 卒     <!-- .element: class="fragment" -->
                         </textarea>
                     </section>
                 </section>
@@ -147,33 +187,39 @@
                 <section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### advanced 爬虫
+                            ### 爬虫 in action
                         </textarea>
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### 整站爬取
+                            ![login](./images/login.png)
                         </textarea>
                     </section>
-                    <section data-markdown style="font-size: 80%;">
+                    <section data-markdown>
                         <textarea data-template>
-                            ### 多线程/多进程/分布式爬虫
-
-                            爬虫本身是 IO 密集型应用，大多数花销都用在了网络 IO 的等待上，CPU 没有得到充分的利用。
-
-                            - 多线程：受限于 Python 的 GIL，比较鸡肋。
-
-                            - 多进程：IPC 进行任务的调度 (multiprocessing.Queue/Pipe)
-
-                            - 分布式：任务池进行任务的调度 (redis)
+                            ![login form](./images/login_form.png)
                         </textarea>
                     </section>
-                </section>
-
-                <section data-markdown>
-                    <textarea data-template>
-                        ### 爬虫 in action
-                    </textarea>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ![login elements](./images/login_elements.png)
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ![captcha](./images/captcha.gif)
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ![8888](./images/8888.png)
+                        </textarea>
+                    </section>
+                    <section data-markdown>
+                        <textarea data-template>
+                            ![login code](./images/login_code.png)
+                        </textarea>
+                    </section>
                 </section>
             </div>
         </div>
