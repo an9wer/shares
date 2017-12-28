@@ -50,7 +50,7 @@
 
                         1.  send a request and get a response with content  <!-- .element: class="fragment" -->
 
-                            - urllib & urllib2 & cookielib   <!-- .element: class="fragment" -->
+                            - urllib + urllib2 + cookielib   <!-- .element: class="fragment" -->
 
                             - requests      <!-- .element: class="fragment" -->
 
@@ -95,19 +95,6 @@
                     </textarea>
                 </section>
 
-                <!--
-                <section data-markdown>
-                    <textarea data-template>
-                        ### why is python
-                        - Python 语法简洁，第三方库多，开发效率高。
-
-                        - 网络 IO 的时间冲淡了 Python 的性能问题。
-
-                        - Python 的爬虫生态完善。
-                    </textarea>
-                </section>
-                -->
-
                 <section>
                     <section data-markdown>
                         <textarea data-template>
@@ -116,7 +103,7 @@
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### 整站爬取
+                            ### 1. 整站爬取
 
                             - 网站结构整齐：利用广度优先或者深度优先进行爬取。      <!-- .element: class="fragment" -->
 
@@ -125,11 +112,11 @@
                     </section>
                     <section data-markdown style="font-size: 80%;">
                         <textarea data-template>
-                            ### 多线程/多进程/分布式爬虫
+                            ### 2. 多线程/多进程/分布式爬虫
 
                             爬虫本身是 IO 密集型应用，大多数花销都用在了网络 IO 的等待上，CPU 没有得到充分的利用。   <!-- .element: class="fragment" -->
 
-                            - 多线程：受限于 Python 的 GIL，比较鸡肋。        <!-- .element: class="fragment" -->
+                            - 多线程：受限于 CPython 的 GIL，比较鸡肋。        <!-- .element: class="fragment" -->
 
                             - 多进程：IPC 进行任务的调度 (multiprocessing.Queue/Pipe)      <!-- .element: class="fragment" -->
 
@@ -146,7 +133,7 @@
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### 基于 request headers
+                            ### 1. 基于 request headers
 
                             - user-agent        <!-- .element: class="fragment" -->
 
@@ -157,7 +144,7 @@
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### 基于 RPS
+                            ### 2. 基于 RPS
 
                             - proxy         <!-- .element: class="fragment" -->
 
@@ -166,7 +153,7 @@
                     </section>
                     <section data-markdown style="font-size: 80%;">
                         <textarea data-template>
-                            ### 基于 ajax/javascript
+                            ### 3. 基于 ajax/javascript
 
                             PhantomJS + selenium      <!-- .element: class="fragment" -->
 
@@ -177,7 +164,7 @@
                     </section>
                     <section data-markdown>
                         <textarea data-template>
-                            ### 基于验证码
+                            ### 4. 基于验证码
 
                             # 卒     <!-- .element: class="fragment" -->
                         </textarea>
