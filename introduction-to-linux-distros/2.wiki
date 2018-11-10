@@ -1,0 +1,17 @@
+== linux 发行版 ==
+
+Linux 发行版：各自基于不同版本的 Linux kernel，预装不同的软件，采用不同的版本更新策略。
+
+发行版分类（基于包管理工具）：
+
+-   apt (Debian, Ubuntu, Deepin)
+
+-   yum (Fedora, CentOS, RHEL)
+
+-   packman (ArchLinux, Manjaro)
+
+-   others (Gentoo, OpenSUSE)
+
+[[https://distrowatch.com/|更多介绍]]
+
+[[2.1|next]]

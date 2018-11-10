@@ -1,0 +1,11 @@
+== Linux 包管理 ==
+
+1.  使用 apt, yum 等包管理工具
+
+2.  源代码 build
+
+3.  AppImage, snapcraft, flatpak
+
+[[https://www.rarlab.com/rar/unrarsrc-5.6.8.tar.gz|例子：unrar]]
+
+[[/index|back]]

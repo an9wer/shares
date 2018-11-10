@@ -1,0 +1,13 @@
+=== GNU/Linux ===
+
+-   1980 年代早期，大量公司发布付费软件，拒绝给用户分享代码。
+
+-   1983 年，Richard Stallman 发起 GNU 项目，目的是开发一个完全的由自由软件构成
+的操作系统。
+
+-   1985 年，Richard Stallman 成立 Free Software Foundation (FSF)。
+
+-   1991 年，linus 在自己的电脑上（80386 处理器，MINIX 系统，gcc 编译器）开发出
+了最初的 Linux 系统。
+
+[[/index|back]]

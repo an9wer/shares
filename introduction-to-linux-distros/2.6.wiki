@@ -1,0 +1,17 @@
+== archlinux ==
+
+口号：`A simple, lightweight distribution`
+
+简介：archlinux 崇尚 KISS 原则，它只提供了一个最精简的系统，它不为你多做任何事情，一切的一切都取决于你自己。
+
+特点：
+
+-   安装较为复杂
+
+-   官方 wiki 非常全面
+
+-   AUR 中提供了大量的软件包
+
+-   没有版本号，采用滚动式更新
+
+[[/index|back]]

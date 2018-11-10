@@ -1,0 +1,19 @@
+== Fedora ==
+
+口号：`Choose Freedom. Choose Fedora.`
+
+简介：Fedora 由 Red Hat 赞助，也是 RHEL 的先行版本，通常最早包含一些新技术和新
+特性。从 Fedora 21 版本开始，分为三个分支，Workstation 专注于桌面用户，Server
+专注于服务器，Atomic 专注云计算。
+
+特点：
+
+-   包含最新的软件
+
+-   包管理工具为 DNF
+
+-   官方仓库只包含自由软件
+
+-   版本发布快，通常 6 个月发布一个新版本，版本 x 的维护只提供到版本 x+2 发布之后一个月为止。
+
+[[2.5|next]]
